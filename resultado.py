@@ -1,4 +1,7 @@
 def verifica(número):
+    """Função para verificar os resultados do quiz.
+    Retorna uma string com a classificação.
+    Parâmetro número: pontuação no quiz"""
     if 5 <= número <= 7:
         return f"Seus conhecimentos são rasos em RE4. Sua nota foi {número}."
     elif 8 <= número <= 11:
