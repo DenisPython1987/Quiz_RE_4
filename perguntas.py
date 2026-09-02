@@ -1,6 +1,8 @@
 from Utilidades.números import leia_int
 
 def linha():
+    """Função para imprimir uma linha na tela para organizar 
+    as informações"""
     print("\033[97m-=-\033[m" * 20)
     
 def escolha_usuário(número):
