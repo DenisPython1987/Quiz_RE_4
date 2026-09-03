@@ -70,18 +70,47 @@ def pergunta_1():
             return 1
             
 def pergunta_2():
+    """Função para trabalhar a segunda pergunta.
+    Retorna um valor inteiro."""
+
+    #opções
     opções = ("Broken Butterfly", "Standard Handgun", "Red 9", "Punisher")
+
+    #Criando a variável que vai armazenar a resposta correta 
     certa = 0
+
+    #Mostrando a pergunta 
     print("\033[36mQual é a arma mais forte do jogo?\033[m")
+
+    #Mostrando uma linha na tela para organizar as informações 
     linha()
+
+    #Loop for para mostrar as opções na tela e guardar a resposta correta 
     for indice, valor in enumerate(opções):
+
+        #Determinando a resposta correta como 'Broken Betterfly'
         if valor == "Broken Butterfly":
+
+            #Guardando o índice da resposta correta e somando um
             certa = indice + 1
+
+        #Mostrando as opções na tela
         print(f"\033[34m{indice + 1} - {valor}\033[m")
+
+    #Mostrando uma linha na tela para organizar as informações 
     linha()
+
+    #Chamando a função leia_int() para validar a resposta do usuário 
     escolha = leia_int("\033[33mQual é a resposta correta? Sua resposta: \033[m")
+
+    #Mostrando uma linha na tela para organizar as informações 
     linha()
+
+    #Validando uma segunda vez
     validação = escolha_usuário(escolha)
+
+    #Testando se a função escolha_usuário() retornou True e
+    # testando a resposta do usuário 
     if validação and escolha == certa:
         return 3
     if validação and escolha != certa:
