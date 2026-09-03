@@ -117,15 +117,37 @@ def pergunta_2():
         return 1
             
 def pergunta_3():
+    """Função para trabalhar a terceira pergunta.
+    Retorna um valor inteiro."""
+
+    #Opções
     opções = ("Claire Redfield", "Ashley Graham", "Xuxa Meneghel", "Ada Wong")
+
+    #Criando a variável que vai guardar a resposta correta 
     certa = 0
+
+    #Mostrando a pergunta na tela 
     print("\033[36mQuem você tem que resgatar no jogo?\033[m")
+
+    #Mostrando uma linha na tela para organizar as informações 
     linha()
+
+    Loop for para mostrar as opções na tela e guardar a resposta correta 
     for indice, valor in enumerate(opções):
+
+        #Determinando a resposta correta como 'Ashley Grahan'
         if valor == "Ashley Graham":
+
+            #Guardando o índice da resposta correta e somando um ao índice 
             certa = indice + 1
+
+        #Mostrando as opções na tela 
         print(f"\033[34m{indice + 1} - {valor}\033[m")
+
+    #Mostrando uma linha na tela para organizar as informações 
     linha()
+
+    #Chamando a função leia_int() para validar a escolha do usuário 
     escolha = leia_int("\033[33mQual é a resposta correta? Sua resposta: \033[m")
     linha()
     validação = escolha_usuário(escolha)
