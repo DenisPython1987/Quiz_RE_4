@@ -117,22 +117,22 @@ def pergunta_2():
         return 1
             
 def pergunta_3():
-        opções = ("Claire Redfield", "Ashley Graham", "Xuxa Meneghel", "Ada Wong")
-        certa = 0
-        print("\033[36mQuem você tem que resgatar no jogo?\033[m")
-        linha()
-        for indice, valor in enumerate(opções):
-            if valor == "Ashley Graham":
-                certa = indice + 1
-            print(f"\033[34m{indice + 1} - {valor}\033[m")
-        linha()
-        escolha = leia_int("\033[33mQual é a resposta correta? Sua resposta: \033[m")
-        linha()
-        validação = escolha_usuário(escolha)
-        if validação and escolha == certa:
-            return 3
-        if validação and escolha != certa:
-            return 1
+    opções = ("Claire Redfield", "Ashley Graham", "Xuxa Meneghel", "Ada Wong")
+    certa = 0
+    print("\033[36mQuem você tem que resgatar no jogo?\033[m")
+    linha()
+    for indice, valor in enumerate(opções):
+        if valor == "Ashley Graham":
+            certa = indice + 1
+        print(f"\033[34m{indice + 1} - {valor}\033[m")
+    linha()
+    escolha = leia_int("\033[33mQual é a resposta correta? Sua resposta: \033[m")
+    linha()
+    validação = escolha_usuário(escolha)
+    if validação and escolha == certa:
+        return 3
+    if validação and escolha != certa:
+        return 1
             
 def pergunta_4():
         opções = ("Verdugo", "Dr. Salvador", "El gigante", "Salazar")
