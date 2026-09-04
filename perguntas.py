@@ -163,18 +163,47 @@ def pergunta_3():
         return 1
             
 def pergunta_4():
+    """Função para trabalhar a quarta pergunta.
+    Retorna um inteiro"""
+
+    #Opções
     opções = ("Verdugo", "Dr. Salvador", "El gigante", "Salazar")
+
+    #Criando a variável que vai armazenar a resposta certa 
     certa = 0
+
+    #Mostrando a pergunta ao usuário 
     print("\033[36mQual chefão precisa de nitrogênio para ser derrotado?\033[m")
+
+    #Mostrando uma linha na tela para organizar as informações 
     linha()
+
+    #Loop for para mostrar as opções na tela e guardar a opção correta 
     for indice, valor in enumerate(opções):
+
+        #Determinando a resposta correta como "Verdugo"
         if valor == "Verdugo":
+
+            #Guardando o índice da resposta correta e somando um
             certa = indice + 1
+
+        #Mostrando as opções na tela
         print(f"\033[34m{indice + 1} - {valor}\033[m")
+
+        #Mostrando uma linha na tela para organizar as informações 
         linha()
+
+    #Chamando a função leia_int() para validar a opção do usuário 
     escolha = leia_int("\033[33mQual é a resposta correta? Sua resposta: \033[m")
+
+    #Mostrando uma linha na tela para organizar as informações 
     linha()
+
+    #Validando uma vez mais
     validação = escolha_usuário(escolha)
+
+    #Testando se a validação retornou True e se a resposta do
+    #Usuário está correta
     if validação and escolha == certa:
         return 3
     if validação and escolha != certa:
