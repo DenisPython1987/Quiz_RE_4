@@ -1,11 +1,11 @@
 from Utilidades.números import leia_int
 
-def linha():
+def linha() -> None:
     """Função para imprimir uma linha na tela para organizar 
     as informações"""
     print("\033[97m-=-\033[m" * 20)
     
-def escolha_usuário(número):
+def escolha_usuário(número: int) -> bool:
     """Função para validar a escolha do usuário.
     Recebe um inteiro que é digitado pelo usuário.
     Retorna um valor booleano."""
@@ -19,7 +19,7 @@ def escolha_usuário(número):
         return True
     
 
-def pergunta_1():
+def pergunta_1() -> int:
     """Função para a primeira pergunta. Retorna um inteiro 
     que representa a pontuação do Jogador."""
 
@@ -69,7 +69,7 @@ def pergunta_1():
         if validação and escolha != certa:
             return 1
             
-def pergunta_2():
+def pergunta_2() -> int:
     """Função para trabalhar a segunda pergunta.
     Retorna um valor inteiro."""
 
@@ -116,7 +116,7 @@ def pergunta_2():
     if validação and escolha != certa:
         return 1
             
-def pergunta_3():
+def pergunta_3() -> int:
     """Função para trabalhar a terceira pergunta.
     Retorna um valor inteiro."""
 
@@ -162,7 +162,7 @@ def pergunta_3():
     if validação and escolha != certa:
         return 1
             
-def pergunta_4():
+def pergunta_4() -> int:
     """Função para trabalhar a quarta pergunta.
     Retorna um inteiro"""
 
@@ -209,7 +209,7 @@ def pergunta_4():
     if validação and escolha != certa:
         return 1
 
-def pergunta_5():
+def pergunta_5() -> int:
     """Função para trabalhar a quinta pergunta.
     Retorna um inteiro"""
 
