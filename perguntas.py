@@ -1,4 +1,4 @@
-from Utilidades.números import leia_int
+from Utilidades.numeros import leia_int
 
 def linha() -> None:
     """Função para imprimir uma linha na tela para organizar 
