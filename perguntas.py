@@ -163,22 +163,22 @@ def pergunta_3():
         return 1
             
 def pergunta_4():
-        opções = ("Verdugo", "Dr. Salvador", "El gigante", "Salazar")
-        certa = 0
-        print("\033[36mQual chefão precisa de nitrogênio para ser derrotado?\033[m")
+    opções = ("Verdugo", "Dr. Salvador", "El gigante", "Salazar")
+    certa = 0
+    print("\033[36mQual chefão precisa de nitrogênio para ser derrotado?\033[m")
+    linha()
+    for indice, valor in enumerate(opções):
+        if valor == "Verdugo":
+            certa = indice + 1
+        print(f"\033[34m{indice + 1} - {valor}\033[m")
         linha()
-        for indice, valor in enumerate(opções):
-            if valor == "Verdugo":
-                certa = indice + 1
-            print(f"\033[34m{indice + 1} - {valor}\033[m")
-        linha()
-        escolha = leia_int("\033[33mQual é a resposta correta? Sua resposta: \033[m")
-        linha()
-        validação = escolha_usuário(escolha)
-        if validação and escolha == certa:
-            return 3
-        if validação and escolha != certa:
-            return 1
+    escolha = leia_int("\033[33mQual é a resposta correta? Sua resposta: \033[m")
+    linha()
+    validação = escolha_usuário(escolha)
+    if validação and escolha == certa:
+        return 3
+    if validação and escolha != certa:
+        return 1
 
 def pergunta_5():
     opções = ("México", "Brasil", "Japão", "Espanha")
