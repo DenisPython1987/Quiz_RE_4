@@ -1,4 +1,4 @@
-def verifica(número):
+def verifica(número: int) -> str:
     """Função para verificar os resultados do quiz.
     Retorna uma string com a classificação.
     Parâmetro número: pontuação no quiz"""
